@@ -1,0 +1,15 @@
+const players = [
+    { id: 1, name: 'Player 1', team: 'Team A', position: 'Quarterback', points: 100 },
+    { id: 2, name: 'Player 2', team: 'Team B', position: 'Running Back', points: 150 },
+    { id: 3, name: 'Player 3', team: 'Team C', position: 'Wide Receiver', points: 120 }
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+    const playerList = document.getElementById('player-list');
+    
+    players.forEach(player => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${player.name} - ${player.team} - ${player.position} - ${player.points} points`;
+        playerList.appendChild(listItem);
+    });
+});
